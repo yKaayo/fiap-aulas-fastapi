@@ -1,0 +1,59 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Variables */
+.text--white {
+  color: #fff;
+}
+/* Variables - End */
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  min-height: 100vh;
+  width: 100%;
+  background-color: #000;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+
+  & label {
+    margin: 0 auto;
+    font-size: 32px;
+    font-weight: 700;
+  }
+
+  & button {
+    color: #fff;
+    background-color: #0044ff;
+    border-radius: 8px;
+    border-color: #0044ff;
+    font-size: 24px;
+    font-weight: 700;
+    transition-duration: 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}
+
+#response {
+  & tr {
+    border: 1px solid #fff;
+
+    & td {
+      font-size: 28px;
+      font-weight: 700;
+    }
+  }
+}

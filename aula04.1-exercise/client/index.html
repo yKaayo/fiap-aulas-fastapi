@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main>
+      <form action="">
+        <label class="text--white" for="maxValue">Digite o valor máximo: </label>
+        <input type="number" name="maxValue" id="maxValue" placeholder="100" />
+
+        <label class="text--white" for="value">Escolha a categoria: </label>
+        <select name="category" id="category">
+          <option value="automovel" selected disabled>Escolha uma categoria</option>
+          <option value="automovel">Automóveis</option>
+          <option value="eletronico">Eletrônicos</option>
+        </select>
+
+        <button class="">Buscar</button>
+      </form>
+
+      <table class="text--white" id="response"></table>
+    </main>
+
+    <script src="./main.js"></script>
+  </body>
+</html>
