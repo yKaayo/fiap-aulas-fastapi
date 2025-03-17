@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulário</title>
+  </head>
+  <body class="bg-slate-600">
+    <main
+      class="container mx-auto min-h-svh text-white flex flex-col items-center justify-center py-10 px-5 sm:px-0"
+    >
+      <h2 class="font-bold text-4xl text-center text-balance mb-5">
+        PREENCHA OS DADOS DO PRODUTO
+      </h2>
+      <form
+        action="/product"
+        method="post"
+        id="form"
+        onsubmit="createProduct(event)"
+        class="flex flex-col w-full sm:w-[80%] gap-3"
+      >
+        <div class="flex flex-col">
+          <label for="name" class="font-semibold text-2xl">Nome:</label>
+          <input
+            class="border-2 border-white rounded-lg px-3 py-1 focus:outline-white focus:shadow-lg"
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Notebook"
+            required
+          />
+        </div>
+
+        <div class="flex flex-col">
+          <label for="price" class="font-semibold text-2xl">Preço:</label>
+          <input
+            type="number"
+            class="border-2 border-white rounded-lg px-3 py-1 focus:outline-white focus:shadow-lg"
+            id="price"
+            name="price"
+            step="0.10"
+            placeholder="0,50"
+            required
+          />
+        </div>
+
+        <div class="flex flex-col">
+          <label for="category" class="font-semibold text-2xl"
+            >Categoria:</label
+          >
+          <input
+            type="text"
+            class="border-2 border-white rounded-lg px-3 py-1 focus:outline-white focus:shadow-lg"
+            id="category"
+            name="category"
+            placeholder="20"
+            required
+          />
+        </div>
+
+        <button
+          class="border-2 border-white font-bold text-2xl py-2 duration-300 hover:bg-white hover:text-black rounded-2xl cursor-pointer mt-8 hover:scale-105"
+        >
+          Cadastrar
+        </button>
+      </form>
+
+      <button
+        onclick="getProducts()"
+        class="border-2 border-white font-bold text-2xl py-2 duration-300 hover:bg-white hover:text-black rounded-2xl cursor-pointer mt-8 hover:scale-105 px-3"
+      >
+        Ver produtos cadastrados
+      </button>
+
+      <div id="result" class="flex flex-col gap-5 my-5"></div>
+    </main>
+
+    <!-- Tailwind -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+    <!-- JS -->
+    <script src="./main.js"></script>
+  </body>
+</html>
