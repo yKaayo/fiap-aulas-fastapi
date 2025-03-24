@@ -1,0 +1,19 @@
+.bg-img {
+    background-image: url('./img/texture.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: -2;
+    opacity: .6;
+}
+
+.bg-color {
+    background-color: #5cbeff;
+    opacity: .4;
+    position: fixed;
+    z-index: -1;
+    min-height: 100vh;
+    width: 100%;
+}
