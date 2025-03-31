@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Netflix</title>
+  <link rel="shortcut icon" href="./assets/images/netflix_logo.png" type="image/x-icon">
+</head>
+
+<body class="bg-black">
+  <header class="container mx-auto px-5 py-3 fixed w-full top-0 bg-linear-to-b from-black to-transparent">
+    <img src="./assets/images/netflix_logo.png" class="size-14" alt="Logo da Netflix">
+  </header>
+  <main class="container mx-auto text-white mt-[80px] pb-5 min-h-[calc(100vh-80px)] flex flex-col justify-center">
+    <h1 class="text-center text-4xl font-bold mb-6">Cadastrar Filmes e Series</h1>
+
+    <form onsubmit="cadastrarFilme(event)" class="mx-auto flex flex-col w-[80%] gap-3">
+      <input type="text" required class="bg-white/30 placeholder:text-white border border-white rounded-lg px-3 py-1"
+        id="title" placeholder="TÍTULO" />
+
+      <input type="text" required class="bg-white/30 placeholder:text-white border border-white rounded-lg px-3 py-1"
+        id="description" placeholder="DESCRIÇÃO" />
+
+      <select id="genre" required class="bg-white/30 border border-white rounded-lg px-3 py-1" required>
+        <option class="text-black" value="" disabled selected>SELECIONE O GÊNERO</option>
+        <option class="text-black" value="Ação">AÇÃO</option>
+        <option class="text-black" value="Comédia">COMÉDIA</option>
+        <option class="text-black" value="Drama">DRAMA</option>
+        <option class="text-black" value="Ficção Científica">FICÇÃO CIENTÍFICA</option>
+        <option class="text-black" value="Animação">ANIMAÇÃO</option>
+      </select>
+
+      <input type="text" required class="bg-white/30 placeholder:text-white border border-white rounded-lg px-3 py-1"
+        id="release" placeholder="ANO DE LANÇAMENTO" minlength="4" maxlength="4" />
+
+      <input type="text" required class="bg-white/30 placeholder:text-white border border-white rounded-lg px-3 py-1"
+        id="image" placeholder="URL DA IMAGEM" />
+
+      <button
+        class="mt-2 bg-red-600 rounded-lg py-1 px-3 cursor-pointer hover:bg-transparent duration-300 border-2 border-red-600 hover:text-red-600">CADASTRAR</button>
+    </form>
+
+    <p class="mx-auto my-3">OU</p>
+
+    <button onclick="getMovies()" type="button"
+      class="hover:bg-red-600 rounded-lg py-1 px-3 cursor-pointer bg-transparent duration-300 border-2 border-red-600 text-red-600 hover:text-white w-[80%] mx-auto">VER
+      CONTEÚDOS CADASTRADOS</button>
+
+    <p id="info" class="mx-auto font-bold text-2xl"></p>
+    <div id="data" class="container mx-auto grid grid-cols-1 sm:grid-cols-2 px-5 md:px-0 lg:grid-cols-3 gap-5 mt-5">
+    </div>
+  </main>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+  <!-- JS -->
+  <script src="./main.js"></script>
+</body>
+
+</html>
