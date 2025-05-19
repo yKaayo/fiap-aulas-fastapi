@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Login e Cadastro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Autenticação de Usuários</h1>
+
+  <div class="container">
+    <form id="registerForm">
+      <h2>Cadastro</h2>
+      <input type="text" id="regUsername" placeholder="Usuário" required />
+      <input type="email" id="regEmail" placeholder="Email" required />
+      <input type="password" id="regPassword" placeholder="Senha" required />
+      <button type="submit">Cadastrar</button>
+    </form>
+
+    <form id="loginForm">
+      <h2>Login</h2>
+      <input type="text" id="loginUsername" placeholder="Usuário" required />
+      <input type="password" id="loginPassword" placeholder="Senha" required />
+      <button type="submit">Entrar</button>
+    </form>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
