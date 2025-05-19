@@ -1,4 +1,4 @@
-fastapi
-uvicorn
-oracledb
+fastapi==0.95.2
+uvicorn==0.22.0
+oracledb==1.3.2
 passlib[bcrypt]
