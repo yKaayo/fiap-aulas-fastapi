@@ -7,14 +7,17 @@ registerForm.addEventListener("submit", async (e) => {
   const user = {
     username: document.getElementById("regUsername").value,
     email: document.getElementById("regEmail").value,
-    password: document.getElementById("regPassword").value
+    password: document.getElementById("regPassword").value,
   };
 
-  const response = await fetch("http://127.0.0.1:8000/register", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(user)
-  });
+  const response = await fetch(
+    "https://fiap-aula07-fastapi.up.railway.app/register",
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(user),
+    }
+  );
 
   const data = await response.json();
   alert(data.message || data.detail);
@@ -26,14 +29,17 @@ loginForm.addEventListener("submit", async (e) => {
 
   const credentials = {
     username: document.getElementById("loginUsername").value,
-    password: document.getElementById("loginPassword").value
+    password: document.getElementById("loginPassword").value,
   };
 
-  const response = await fetch("http://127.0.0.1:8000/login", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify(credentials)
-  });
+  const response = await fetch(
+    "https://fiap-aula07-fastapi.up.railway.app/login",
+    {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(credentials),
+    }
+  );
 
   const data = await response.json();
   alert(data.message || data.detail);
